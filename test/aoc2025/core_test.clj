@@ -12,7 +12,7 @@
 (ns aoc2025.core-test
   (:require
    [clojure.test :refer [deftest is testing]]
-   [aoc2025.core :as core]))
+   [aoc2025.core :as sut]))
 
 (deftest application-test
   (testing "test"

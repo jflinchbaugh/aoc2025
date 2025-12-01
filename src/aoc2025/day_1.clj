@@ -49,19 +49,14 @@
     ))
 
 (comment
-
-  (rest "R10")
-
-  (re-find #"(\w)(\d+)" "R10")
-
-  (mod -30 10)
-
   (->> "input/day-1.txt"
     slurp
     part-1)
+  ;; => 1145
 
   (->> "input/day-1.txt"
     slurp
     part-2)
+  ;; => 6561
 
   nil)

@@ -44,6 +44,7 @@ L82
   (t/are
       [expected in]
       (= expected (sut/times-passed-0 in))
+    ; [current op clicks]
     0 [50 + 0]
     0 [1 - 98]
     0 [99 + 99]

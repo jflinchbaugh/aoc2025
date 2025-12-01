@@ -17,8 +17,8 @@ L82
 
 (t/deftest test-rotate
   (t/are
-      [expected start turn]
-      (= expected (sut/rotate start turn))
+   [expected start turn]
+   (= expected (sut/rotate start turn))
     5 5 "R0"
     5 5 "L0"
     6 5 "L1"
@@ -31,8 +31,8 @@ L82
 
 (t/deftest test-rotate-2
   (t/are
-      [expected start turn]
-      (= expected (sut/rotate-2 start turn))
+   [expected start turn]
+   (= expected (sut/rotate-2 start turn))
     [5 - 0] [5 + 0] "R0"
     [5 + 0] [5 + 0] "L0"
     [6 + 1] [5 + 0] "L1"
@@ -42,8 +42,8 @@ L82
 
 (t/deftest test-times-passed-0
   (t/are
-      [expected in]
-      (= expected (sut/times-passed-0 in))
+   [expected in]
+   (= expected (sut/times-passed-0 in))
     ; [current op clicks]
     0 [50 + 0]
     0 [1 - 98]

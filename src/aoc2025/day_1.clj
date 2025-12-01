@@ -19,6 +19,35 @@
     count)
   )
 
+(defn rotate-2 [[start _ _] turn]
+  (let [[_ d c] (re-find #"(\w)(\d+)" turn)
+        dir-op ({"R" - "L" +} d)
+        clicks (parse-long c)]
+    [(mod (dir-op start clicks) 100) dir-op clicks])
+  )
+
+(defn times-passed-0 [[current dir-op clicks]]
+  (let [times-around (long (/ clicks 100))
+        mod-clicks (mod clicks 100)
+        start (mod (({- + + -} dir-op) current clicks) 100)]
+    (+ times-around
+      (cond
+        (= 0 current) 1
+        (= 0 start) 0
+        (and (= + dir-op) (< current start)) 1
+        (and (= - dir-op) (> current start)) 1
+        :else 0))))
+
+(defn part-2 [input]
+  (->>
+    input
+    str/trim
+    str/split-lines
+    (reductions rotate-2 [50 + 0])
+    (map times-passed-0)
+    (reduce + 0)
+    ))
+
 (comment
 
   (rest "R10")
@@ -30,5 +59,9 @@
   (->> "input/day-1.txt"
     slurp
     part-1)
+
+  (->> "input/day-1.txt"
+    slurp
+    part-2)
 
   nil)

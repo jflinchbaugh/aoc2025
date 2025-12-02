@@ -17,8 +17,8 @@
    ;; REPL Workflow
    [mulog-events]                      ; Event Logging
    [com.brunobonacci.mulog :as mulog]  ; Global context & Tap publisher
-   [portal]
-   [portal.api :as inspect]                          ; Data inspector
+   #_[portal]
+   #_[portal.api :as inspect]                          ; Data inspector
    [clojure.tools.namespace.repl :as namespace]))
 
 ;; ---------------------------------------------------------

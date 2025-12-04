@@ -65,4 +65,6 @@
    part-2)
   ;; => 170418192256861
 
+  (mu/log ::test :message "ok")
+
   nil)

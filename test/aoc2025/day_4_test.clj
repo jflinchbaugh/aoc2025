@@ -55,3 +55,5 @@
 (t/deftest test-part-1
   (t/is (= 13 (sut/part-1 input))))
 
+(t/deftest test-part-2
+  (t/is (= 43 (sut/part-2 input))))

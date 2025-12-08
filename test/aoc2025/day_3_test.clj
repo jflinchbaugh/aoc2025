@@ -37,7 +37,7 @@
         expected
         (parse-long
           (apply str
-            (sut/pair-down-max n
+            (sut/pare-down-max n
               (map (comp parse-long str) input)))))
     89 2 "89"
     89 2 "189"

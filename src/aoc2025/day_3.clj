@@ -14,10 +14,10 @@
       (combo/combinations c)
       (->> (map (fn [lst] (map second lst)))))))
 
-(defn pair-down-max
-  "pair down a list of digits to produce n digits to make the largest number"
+(defn pare-down-max
+  "pare down a list of digits to produce n digits to make the largest number"
   ([n digits]
-   (pair-down-max [] n digits))
+   (pare-down-max [] n digits))
 
   ([selected n digits]
   (if (<= n (count selected))
@@ -36,7 +36,7 @@
   (->>
    digits
    (map (comp parse-long str))
-   (pair-down-max n)
+   (pare-down-max n)
    (apply str)
    parse-long))
 
